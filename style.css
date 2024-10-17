@@ -1,0 +1,141 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0px;
+    background-image: url('ae1f047b48962716f3a101191cf37816.jpg');
+    background-size: cover;
+}
+
+.inputs-body {
+    display: flex;
+    /* border: 2px solid burlywood; */
+    height: 50vh;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    border-radius: 38px;
+    /* background-color: #fa93747d; */
+    background-color: #142f4091;
+}
+h2{
+    color: #ffffff;
+}
+.inputss{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+.encrypted-messages , .shift-value{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    margin: 2px;
+    height: 20px;
+}
+.encrypted-messages:focus , .shift-value:focus{
+    border: 2px solid #d2d1ee;
+    background-color: #d2d1ee;
+}
+.encrypted-messages:focus-visible, .shift-value:focus-visible{
+    outline: none;
+
+}
+.input1, .input2{
+    font-size: 20px;
+    color: #fff703;
+    font-weight: bold;
+}
+.decoded-messages{
+    font-size: 20px;
+    display: flex;
+    /* color: rgb(107, 234, 84); */
+    color: #fff703;
+
+    justify-content: center;
+}
+.btn-D , .btn-R{
+    width: 150px;
+    height: 30px;
+    background-color: #e2116e;
+    border-radius: 20px;
+    color: #ffffff;
+    /* border: 2px solid #82043d; */
+}
+.btn-D:hover{
+    background-color: #e73786;
+}
+.Shift-error, .encrypted-error{
+    font-size: 17px;
+    color:red;
+}
+@media (max-width : 1280px){
+    body{
+        background-size: auto;
+    }
+}
+@media (max-width : 620px){
+    .inputs-body {
+        display: flex;
+        height: 65vh;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(3px);
+        border-radius: 38px;
+        background-color: #142f4091;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .input1, .input2{
+        font-size: 17px;
+    }
+    .encrypted-messages , .shift-value{
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: none;
+        margin: 2px;
+        height: 20px;
+    }
+    .inputss{
+        width: 80%;
+    }
+}
+@media (max-width : 420px){
+    .inputs-body {
+        display: flex;
+        height: 65vh;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(3px);
+        border-radius: 38px;
+        background-color: #142f4091;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .input1, .input2{
+        font-size: 17px;
+    }
+    .encrypted-messages , .shift-value{
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: none;
+        margin: 2px;
+        height: 20px;
+    }
+    .inputss{
+        width: 80%;
+    }
+}

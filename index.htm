@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+      <div class="inputs-body">
+        <h2>Decoding World War II Messages</h2>
+        <div class="inputss">
+          <label class="input1" for="encrypted-messages">Encrypted Messages: </label>
+          <input 
+          name="encrypted-messages" 
+          type="text" 
+          class="encrypted-messages" 
+          id="encrypted-messages" 
+          placeholder="enter the sentence" 
+          autocomplete="off" required>
+          <span class="encrypted-error" ></span><br>
+        </div>
+        <div class="inputss">
+          <label class="input2" for="shift-value">Shift Value: </label>
+          <input 
+          name="shiftValue" 
+          type="number" 
+          class="shift-value" 
+          id="shift-value" 
+          placeholder="enter the shift value" 
+          autocomplete="off"
+          required>
+          <span class="Shift-error"></span><br>
+        </div>  
+        <br>
+        <div class="buttons">
+          <button class="btn-D">Decode Messages</button>
+          <button class="btn-R" onclick="reset()">Clear Messages</button><br><br>
+          <!-- <span id="decoded-messages" class="decoded-messages"> Your Decoded Message </span> -->
+        </div>
+        <span id="decoded-messages" class="decoded-messages"> Your Decoded Message </span>
+
+      </div>
+      
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+        <!-- <input class="intest" type="text" onchange="ini2()"><br>
+        <span class="sptest"> </span> -->
+  <script src="script.js"></script>
+</body>
+</html>
