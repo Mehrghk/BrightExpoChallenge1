@@ -26,7 +26,6 @@ document
         initialize();
 
     }
-    
     });
 
 function initialize(){
@@ -35,8 +34,35 @@ function initialize(){
     decodedMessages.innerText = finalSentence;
 }
 // Khoor zruog
-//Wklv lv d whvw phvvdjh
+//Wklv lv d whvw 
 
+function handleFinalSentence(Decoded){
+    const width = window.innerWidth;
+    if (width < 400) {
+        if(Decoded.length % 20 == 0){
+            Decoded.push("\n");
+            console.log(Decoded.length);
+        } else {
+            console.log(Decoded.length);
+        }
+    } else if (width >= 440 && width < 600) {
+        if(Decoded.length % 34 == 0){
+            Decoded.push("\n");
+            console.log(Decoded.length);
+        }
+    } else if (width >= 600 && width < 800) {
+        if(Decoded.length % 40 == 0){
+            Decoded.push("\n");
+            console.log(Decoded.length);
+        }
+    } else {
+        if(Decoded.length % 40 == 0){
+            Decoded.push("\n");
+            console.log(Decoded.length);
+        }
+        console.log("Large screen detected");
+    }
+}
 function handleShiftValue(){
     ShiftValue = document.querySelector('#shift-value').value;
     intShift = parseInt(ShiftValue);
@@ -63,39 +89,26 @@ function handleSingleAlphabet(encryptedAlphabet){
     console.log(`stringdecoded: ${stringdecoded}`);
     finalSentence = stringdecoded;
     console.log(finalSentence);
-
 }
 
 function changeMessageIntoAlphabetArray(encryptedMessage){
-    // for(let i=0; i < encryptedMessage.length; i++){
-        // console.log(encryptedMessage.slice(i,i+1));
-        // alphabet.push(encryptedMessage.slice(i,i+1));
-        // console.log(alphabet);
-        // console.log(`alphabet : ${alphabet}`);
-    // }
-    // console.log(`alphabet : ${alphabet}`);
     alphabet = encryptedMessage.split('');
     console.log(alphabet);
-
 }
 
 function handleAlphabetArray(encryptedMessage){
     let Decoded = [];
     for(let i=0; i < encryptedMessage.length; i++){
-
-    if(alphabet[i] == ' '){
-        Decoded.push(' ');
-    } else {
-        handleSingleAlphabet(alphabet[i]);
-        Decoded.push(stringdecoded.toString());
+        if(alphabet[i] == ' '){
+            Decoded.push(' ');
+        } else {
+            handleSingleAlphabet(alphabet[i]);
+            Decoded.push(stringdecoded.toString());
+            handleFinalSentence(Decoded);
+        }
     }
-    
-    }
-    
     finalSentence = Decoded.join('');
-
     console.log(Decoded);
-
     console.log(finalSentence);
 }
 
@@ -104,4 +117,3 @@ document.querySelector('.encrypted-messages').value = '';
 document.querySelector('#shift-value').value = '';
 document.querySelector('.decoded-messages').innerText = 'Your Decoded Message';
 }
-
