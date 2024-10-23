@@ -42,8 +42,6 @@ function handleFinalSentence(Decoded){
         if(Decoded.length % 20 == 0){
             Decoded.push("\n");
             console.log(Decoded.length);
-        } else {
-            console.log(Decoded.length);
         }
     } else if (width >= 440 && width < 600) {
         if(Decoded.length % 34 == 0){
